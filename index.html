@@ -7,6 +7,7 @@
 <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
   <title>Cron Expression Generator — Free Online | Tabutility</title>
   <meta name="description" content="Build and explain cron job expressions visually. See the next scheduled run times for any cron schedule.">
   <meta name="robots" content="index, follow"/>
@@ -20,45 +21,53 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://tabutility.com/og-blog.png">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#f8f7f4">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Cron Expression Generator","url":"https://cron-generator.tabutility.com/","description":"Build and explain cron job expressions visually. See the next scheduled run times for any cron schedule.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"Cron Expression Generator","item":"https://cron-generator.tabutility.com/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a cron expression?","acceptedAnswer":{"@type":"Answer","text":"A cron expression is a string of 5 fields (minute, hour, day, month, weekday) that defines a schedule for automated tasks. It is used in Unix-like systems and many cloud services."}},{"@type":"Question","name":"What does * mean in a cron expression?","acceptedAnswer":{"@type":"Answer","text":"An asterisk (*) means \"every\" — for example, * in the hour field means \"every hour\". You can also use */5 for \"every 5 units\"."}},{"@type":"Question","name":"What timezone does cron use?","acceptedAnswer":{"@type":"Answer","text":"By default, cron uses the server's local timezone. Many cloud schedulers (e.g. AWS EventBridge) use UTC. Always check your platform's timezone setting."}}]}</script>
   <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
+<style id="tabutility-brand">
+/* empty ad slots: reserve space, no bordered box */
+.ad-banner,.ad-slot,.ad-container{background:transparent!important;border:none!important;border-bottom:none!important;box-shadow:none!important}
+ins.adsbygoogle,.ad-banner iframe,.ad-slot iframe{visibility:hidden!important}
+ins.adsbygoogle[data-ad-status="filled"],.ad-banner ins[data-ad-status="filled"] iframe,.ad-slot ins[data-ad-status="filled"] iframe{visibility:visible!important}
+nav .brand{color:#0f172a}
+body{-webkit-font-smoothing:antialiased}
+</style>
 </head>
-<body style="margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#0f172a;color:#f1f5f9;min-height:100vh">
-<nav style="background:#1e293b;padding:11px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #334155"><a href="https://tabutility.com" style="color:#fff;font-weight:800;font-size:16px;text-decoration:none">⚡ Tabutility</a><a href="https://tabutility.com/blog/" style="color:#a5b4fc;font-size:13px;font-weight:700;text-decoration:none">📖 Blog</a></nav>
+<body style="margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#f8f7f4;color:#0f172a;min-height:100vh">
+<nav style="background:#ffffff;padding:11px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e2e8f0"><a href="https://tabutility.com" style="color:#fff;font-weight:800;font-size:16px;text-decoration:none">⚡ Tabutility</a><a href="https://tabutility.com/blog/" style="color:#a5b4fc;font-size:13px;font-weight:700;text-decoration:none">📖 Blog</a></nav>
 <div style="max-width:640px;margin:12px auto;padding:0 8px"><ins class="adsbygoogle" style="display:block;min-height:90px" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
 
 <div id="app" style="max-width:640px;margin:8px auto;padding:0 8px 32px">
   <h1 style="font-size:24px;font-weight:800;margin:0 0 4px">⏰ Cron Expression Generator</h1>
-  <p style="color:#94a3b8;font-size:14px;margin:0 0 20px">Build and explain cron expressions visually. See the next scheduled run times.</p>
-  <div style="background:#1e293b;border-radius:10px;padding:18px;border:1px solid #334155;margin-bottom:14px">
+  <p style="color:#64748b;font-size:14px;margin:0 0 20px">Build and explain cron expressions visually. See the next scheduled run times.</p>
+  <div style="background:#ffffff;border-radius:10px;padding:18px;border:1px solid #e2e8f0;margin-bottom:14px">
     <div style="font-size:13px;font-weight:700;color:#a5b4fc;margin-bottom:12px">QUICK PRESETS</div>
     <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px">
-      <button onclick="setExpr('* * * * *')" style="background:#334155;border:none;color:#a5b4fc;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px">Every minute</button><button onclick="setExpr('0 * * * *')" style="background:#334155;border:none;color:#a5b4fc;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px">Every hour</button><button onclick="setExpr('0 0 * * *')" style="background:#334155;border:none;color:#a5b4fc;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px">Every day at midnight</button><button onclick="setExpr('0 0 * * 1')" style="background:#334155;border:none;color:#a5b4fc;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px">Every Monday</button><button onclick="setExpr('0 9 * * 1-5')" style="background:#334155;border:none;color:#a5b4fc;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px">Every weekday 9am</button><button onclick="setExpr('0 0 1 * *')" style="background:#334155;border:none;color:#a5b4fc;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px">1st of month</button>
+      <button onclick="setExpr('* * * * *')" style="background:#e2e8f0;border:none;color:#a5b4fc;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px">Every minute</button><button onclick="setExpr('0 * * * *')" style="background:#e2e8f0;border:none;color:#a5b4fc;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px">Every hour</button><button onclick="setExpr('0 0 * * *')" style="background:#e2e8f0;border:none;color:#a5b4fc;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px">Every day at midnight</button><button onclick="setExpr('0 0 * * 1')" style="background:#e2e8f0;border:none;color:#a5b4fc;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px">Every Monday</button><button onclick="setExpr('0 9 * * 1-5')" style="background:#e2e8f0;border:none;color:#a5b4fc;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px">Every weekday 9am</button><button onclick="setExpr('0 0 1 * *')" style="background:#e2e8f0;border:none;color:#a5b4fc;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px">1st of month</button>
     </div>
     <div style="font-size:13px;font-weight:700;color:#a5b4fc;margin-bottom:12px">MANUAL EXPRESSION</div>
     <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:8px;font-size:10px;text-align:center;color:#475569">
       <div>MINUTE</div><div>HOUR</div><div>DAY (month)</div><div>MONTH</div><div>DAY (week)</div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:8px">
-      <input id="c-min" type="text" value="*" oninput="update()" style="background:#0f172a;border:1px solid #334155;border-radius:6px;padding:10px 6px;color:#f1f5f9;font-size:16px;font-family:monospace;text-align:center;outline:none">
-      <input id="c-hr" type="text" value="*" oninput="update()" style="background:#0f172a;border:1px solid #334155;border-radius:6px;padding:10px 6px;color:#f1f5f9;font-size:16px;font-family:monospace;text-align:center;outline:none">
-      <input id="c-dom" type="text" value="*" oninput="update()" style="background:#0f172a;border:1px solid #334155;border-radius:6px;padding:10px 6px;color:#f1f5f9;font-size:16px;font-family:monospace;text-align:center;outline:none">
-      <input id="c-mon" type="text" value="*" oninput="update()" style="background:#0f172a;border:1px solid #334155;border-radius:6px;padding:10px 6px;color:#f1f5f9;font-size:16px;font-family:monospace;text-align:center;outline:none">
-      <input id="c-dow" type="text" value="*" oninput="update()" style="background:#0f172a;border:1px solid #334155;border-radius:6px;padding:10px 6px;color:#f1f5f9;font-size:16px;font-family:monospace;text-align:center;outline:none">
+      <input id="c-min" type="text" value="*" oninput="update()" style="background:#f8f7f4;border:1px solid #e2e8f0;border-radius:6px;padding:10px 6px;color:#0f172a;font-size:16px;font-family:'Inter',monospace;text-align:center;outline:none">
+      <input id="c-hr" type="text" value="*" oninput="update()" style="background:#f8f7f4;border:1px solid #e2e8f0;border-radius:6px;padding:10px 6px;color:#0f172a;font-size:16px;font-family:'Inter',monospace;text-align:center;outline:none">
+      <input id="c-dom" type="text" value="*" oninput="update()" style="background:#f8f7f4;border:1px solid #e2e8f0;border-radius:6px;padding:10px 6px;color:#0f172a;font-size:16px;font-family:'Inter',monospace;text-align:center;outline:none">
+      <input id="c-mon" type="text" value="*" oninput="update()" style="background:#f8f7f4;border:1px solid #e2e8f0;border-radius:6px;padding:10px 6px;color:#0f172a;font-size:16px;font-family:'Inter',monospace;text-align:center;outline:none">
+      <input id="c-dow" type="text" value="*" oninput="update()" style="background:#f8f7f4;border:1px solid #e2e8f0;border-radius:6px;padding:10px 6px;color:#0f172a;font-size:16px;font-family:'Inter',monospace;text-align:center;outline:none">
     </div>
-    <div style="background:#0f172a;border-radius:6px;padding:12px;text-align:center;margin-bottom:10px">
-      <span id="r-expr" style="font-size:20px;font-weight:700;color:#c4b5fd;font-family:monospace"></span>
+    <div style="background:#f8f7f4;border-radius:6px;padding:12px;text-align:center;margin-bottom:10px">
+      <span id="r-expr" style="font-size:20px;font-weight:700;color:#c4b5fd;font-family:'Inter',monospace"></span>
     </div>
     <div id="r-human" style="font-size:14px;color:#4ade80;text-align:center;font-weight:600;margin-bottom:12px"></div>
     <div id="r-err" style="font-size:13px;color:#f87171;text-align:center;display:none"></div>
   </div>
-  <div style="background:#1e293b;border-radius:10px;padding:18px;border:1px solid #334155">
+  <div style="background:#ffffff;border-radius:10px;padding:18px;border:1px solid #e2e8f0">
     <div style="font-size:13px;font-weight:700;color:#a5b4fc;margin-bottom:12px">NEXT 5 RUN TIMES (UTC)</div>
-    <div id="r-next" style="font-size:13px;color:#94a3b8;font-family:monospace;line-height:1.9"></div>
+    <div id="r-next" style="font-size:13px;color:#64748b;font-family:'Inter',monospace;line-height:1.9"></div>
   </div>
 </div>
 <script>
@@ -103,7 +112,7 @@ function update(){
     document.getElementById('r-human').textContent=explain(e);
     document.getElementById('r-err').style.display='none';
     const runs=nextRuns(e);
-    document.getElementById('r-next').innerHTML=runs.length?runs.map((r,i)=>'<div style="padding:4px 0;border-bottom:1px solid #1e293b">'+(i+1)+'. '+r+'</div>').join(''):'<span style="color:#f87171">Could not calculate next runs — check your expression</span>';
+    document.getElementById('r-next').innerHTML=runs.length?runs.map((r,i)=>'<div style="padding:4px 0;border-bottom:1px solid #ffffff">'+(i+1)+'. '+r+'</div>').join(''):'<span style="color:#f87171">Could not calculate next runs — check your expression</span>';
   }catch(err){document.getElementById('r-err').textContent='⚠ '+err.message;document.getElementById('r-err').style.display='block';}
 }
 update();
@@ -111,41 +120,47 @@ update();
 <div style="max-width:640px;margin:12px auto;padding:0 8px"><ins class="adsbygoogle" style="display:block;min-height:90px" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
 
 <!-- embed-widget -->
-<div style="max-width:640px;margin:0 auto 32px;background:#1e293b;border:1px solid #334155;border-radius:12px;padding:18px">
-  <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px">Embed This Tool</h2>
+<div style="max-width:640px;margin:0 auto 32px;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:18px">
+  <h2 style="font-size:15px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px">Embed This Tool</h2>
   <p style="font-size:13px;color:#64748b;margin-bottom:12px">Add this Cron Expression Generator to your website or blog for free — just paste this code:</p>
-  <div style="background:#0f172a;border:1px solid #334155;border-radius:8px;padding:12px;font-family:monospace;font-size:12px;color:#7dd3fc;word-break:break-all;margin-bottom:10px" id="embed-code">&lt;iframe src=&quot;https://cron-generator.tabutility.com/&quot; width=&quot;100%&quot; height=&quot;600&quot; frameborder=&quot;0&quot; style=&quot;border-radius:12px&quot; title=&quot;Cron Expression Generator by Tabutility&quot;&gt;&lt;/iframe&gt;
+  <div style="background:#f8f7f4;border:1px solid #e2e8f0;border-radius:8px;padding:12px;font-family:'Inter',monospace;font-size:12px;color:#7dd3fc;word-break:break-all;margin-bottom:10px" id="embed-code">&lt;iframe src=&quot;https://cron-generator.tabutility.com/&quot; width=&quot;100%&quot; height=&quot;600&quot; frameborder=&quot;0&quot; style=&quot;border-radius:12px&quot; title=&quot;Cron Expression Generator by Tabutility&quot;&gt;&lt;/iframe&gt;
 &lt;p style=&quot;font-size:12px&quot;&gt;&lt;a href=&quot;https://cron-generator.tabutility.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Cron Expression Generator&lt;/a&gt; by &lt;a href=&quot;https://tabutility.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Tabutility&lt;/a&gt;&lt;/p&gt;</div>
-  <button onclick="navigator.clipboard.writeText(document.getElementById('embed-code').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Embed Code',2000)})" style="background:#38bdf8;color:#0f172a;border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer">Copy Embed Code</button>
+  <button onclick="navigator.clipboard.writeText(document.getElementById('embed-code').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Embed Code',2000)})" style="background:#0f172a;color:#f8f7f4;border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer">Copy Embed Code</button>
   <span style="font-size:11px;color:#475569;margin-left:12px">Free to use — the credit link helps others find the tool</span>
 </div>
-<div style="margin:0 auto 24px;max-width:640px;background:#1e293b;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #334155" onclick="window.open('https://go.nordvpn.net/aff_c?offer_id=15&aff_id=153622&url_id=902','_blank','noopener noreferrer')" title="Stay private online">
+<div style="margin:0 auto 24px;max-width:640px;background:#ffffff;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #e2e8f0" onclick="window.open('https://go.nordvpn.net/aff_c?offer_id=15&aff_id=153622&url_id=902','_blank','noopener noreferrer')" title="Stay private online">
   <span style="font-size:28px;flex-shrink:0">🛡️</span>
   <div style="min-width:0">
-    <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-bottom:3px">Stay private online</div>
-    <div style="font-size:12px;color:#94a3b8">Protect your connection with NordVPN <span style="color:#4ade80;white-space:nowrap">→ Get NordVPN</span></div>
+    <div style="font-size:13px;font-weight:700;color:#0f172a;margin-bottom:3px">Stay private online</div>
+    <div style="font-size:12px;color:#64748b">Protect your connection with NordVPN <span style="color:#4ade80;white-space:nowrap">→ Get NordVPN</span></div>
     <div style="font-size:10px;color:#475569;margin-top:3px">Sponsored · Ad</div>
   </div>
 </div>
-<div style="margin:0 auto 24px;max-width:640px;background:#1e293b;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #334155" onclick="window.open('https://www.amazon.com/s?k=programming+coding+books&tag=tabutility-20','_blank','noopener noreferrer')" title="Level up your dev skills?">
+<div style="margin:0 auto 24px;max-width:640px;background:#ffffff;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #e2e8f0" onclick="window.open('https://www.amazon.com/s?k=programming+coding+books&tag=tabutility-20','_blank','noopener noreferrer')" title="Level up your dev skills?">
   <span style="font-size:28px;flex-shrink:0">📚</span>
   <div style="min-width:0">
-    <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-bottom:3px">Level up your dev skills?</div>
-    <div style="font-size:12px;color:#94a3b8">Browse programming books <span style="color:#f59e0b;white-space:nowrap">→ Browse on Amazon</span></div>
+    <div style="font-size:13px;font-weight:700;color:#0f172a;margin-bottom:3px">Level up your dev skills?</div>
+    <div style="font-size:12px;color:#64748b">Browse programming books <span style="color:#f59e0b;white-space:nowrap">→ Browse on Amazon</span></div>
     <div style="font-size:10px;color:#475569;margin-top:3px">As an Amazon Associate we earn from qualifying purchases.</div>
   </div>
 </div>
-<h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px;max-width:640px;margin-left:auto;margin-right:auto">Related Tools</h2>
+<h2 style="font-size:15px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px;max-width:640px;margin-left:auto;margin-right:auto">Related Tools</h2>
 <div style="max-width:640px;margin:0 auto 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
-      <a href="https://json-formatter.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
-        <div style="font-size:13px;font-weight:600;color:#f1f5f9">JSON Formatter</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
-      <a href="https://regex-tester.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
-        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Regex Tester</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
-      <a href="https://unix-timestamp-converter.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
-        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Unix Timestamp Converter</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
-      <a href="https://uuid-generator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
-        <div style="font-size:13px;font-weight:600;color:#f1f5f9">UUID Generator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
+      <a href="https://json-formatter.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#0f172a">JSON Formatter</div><div style="font-size:11px;color:#64748b;margin-top:2px">Developer Tools</div></a>
+      <a href="https://regex-tester.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#0f172a">Regex Tester</div><div style="font-size:11px;color:#64748b;margin-top:2px">Developer Tools</div></a>
+      <a href="https://unix-timestamp-converter.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#0f172a">Unix Timestamp Converter</div><div style="font-size:11px;color:#64748b;margin-top:2px">Developer Tools</div></a>
+      <a href="https://uuid-generator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#0f172a">UUID Generator</div><div style="font-size:11px;color:#64748b;margin-top:2px">Developer Tools</div></a>
     </div>
+<footer style="border-top:1px solid #e2e8f0;background:#ffffff;margin-top:48px;padding:28px 24px;text-align:center;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:13px;color:#64748b;line-height:1.8">
+<div style="font-weight:700;color:#0f172a;font-size:15px">⚡ Tabutility</div>
+<div>Free, private, browser-based tools. No sign-up, no tracking.</div>
+<div><a href="https://tabutility.com" style="color:#0f172a;font-weight:600;text-decoration:none">All Tools</a> · <a href="https://tabutility.com/blog/" style="color:#64748b;text-decoration:none">Blog</a> · <a href="https://tabutility.com/#about" style="color:#64748b;text-decoration:none">About</a></div>
+<div style="margin-top:6px;color:#94a3b8">© 2026 Tabutility</div>
+</footer>
 </body>
 <!-- built: 1785358927936 -->
 </html>
