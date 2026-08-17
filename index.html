@@ -162,6 +162,96 @@ update();
       <a href="https://schema-markup-generator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
         <div style="font-size:13px;font-weight:600;color:#f1f5f9">Schema Markup Generator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">SEO</div></a>
     </div>
+
+<section id="seo-content">
+  <style>
+    #seo-content{max-width:760px;margin:2.5rem auto;padding:0 1.25rem 3rem;font-family:'Segoe UI',system-ui,Arial,sans-serif;color:#334155;line-height:1.7}
+    #seo-content h2{font-size:1.35rem;color:#0f172a;margin:2rem 0 .75rem}
+    #seo-content h3{font-size:1.05rem;color:#0f172a;margin:1.25rem 0 .5rem}
+    #seo-content p,#seo-content li{font-size:.95rem}
+    #seo-content ul{padding-left:1.4rem;margin:.5rem 0}
+    #seo-content .example{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0;font-family:monospace;font-size:.9rem}
+    @media(prefers-color-scheme:dark){#seo-content{color:#cbd5e1}#seo-content h2,#seo-content h3{color:#f1f5f9}#seo-content .example{background:#1e293b;border-color:#334155}}
+  </style>
+  <h2>How to Use the Cron Expression Generator</h2>
+  <p>The Cron Expression Generator lets you build and validate cron job schedules visually without memorising the five-field syntax. Use the dropdowns and toggles to set the minute, hour, day-of-month, month, and day-of-week fields, and the tool instantly assembles the correct cron expression and shows a plain-English description of what it means. It also displays the next five scheduled run times so you can confirm the schedule fires exactly when you expect — a critical check before deploying a production cron job. You can also paste an existing expression into the input field to have it explained and validated.</p>
+  <p>Cron syntax uses five space-separated fields: minute (0–59), hour (0–23), day of month (1–31), month (1–12), and day of week (0–7, where both 0 and 7 represent Sunday). Special characters extend the syntax considerably — an asterisk (*) means every value, a comma separates multiple values (e.g., 1,15 for the 1st and 15th), a hyphen defines a range (e.g., 9-17 for business hours), and a forward slash defines a step (e.g., */5 for every five minutes). Some systems, particularly Quartz Scheduler in Java, use a six or seven-field format that adds seconds and an optional year field; if you are using Quartz, select the extended format option in the generator.</p>
+  <p>Getting cron expressions right the first time is harder than it looks, especially for schedules involving combinations like "the last Friday of every month" or "every 15 minutes between 8 AM and 6 PM on weekdays". The visual builder in this tool handles all those edge cases by constructing the expression from your intent rather than requiring you to write raw syntax. The next-run preview is the safety net — if the times shown do not match your expectations, you can adjust the fields immediately and re-check before copying the expression into your crontab, CI/CD pipeline, or cloud scheduler.</p>
+
+  <h2>Common Cron Schedule Examples</h2>
+  <ul>
+    <li><strong>Every minute:</strong> <code>* * * * *</code></li>
+    <li><strong>Every 5 minutes:</strong> <code>*/5 * * * *</code></li>
+    <li><strong>Every day at midnight:</strong> <code>0 0 * * *</code></li>
+    <li><strong>Every weekday at 9 AM:</strong> <code>0 9 * * 1-5</code></li>
+    <li><strong>First of every month at 6 AM:</strong> <code>0 6 1 * *</code></li>
+    <li><strong>Every Sunday at 2 AM:</strong> <code>0 2 * * 0</code></li>
+    <li><strong>Every 30 minutes during business hours:</strong> <code>*/30 9-17 * * 1-5</code></li>
+    <li><strong>Twice a day at noon and midnight:</strong> <code>0 0,12 * * *</code></li>
+  </ul>
+
+  <div class="example"><strong>Example:</strong> <code>0 3 * * 1</code> — "At 3:00 AM every Monday." This is a common pattern for weekly database backups or report generation jobs that should run outside business hours at the start of the working week.</div>
+
+  <h2>Frequently Asked Questions</h2>
+  <h3>What is a cron job?</h3>
+  <p>A cron job is a scheduled task on Unix/Linux systems (and many cloud platforms) that runs automatically at a specified time or interval. The name comes from Chronos (Greek for time) and the cron daemon that manages these schedules. Common uses include database backups, sending email digests, clearing caches, running data imports, and triggering CI/CD pipelines.</p>
+  <h3>What is the difference between cron syntax and Quartz cron syntax?</h3>
+  <p>Standard cron uses five fields (minute, hour, day-of-month, month, day-of-week). Quartz Scheduler, widely used in Java applications and some cloud platforms, uses six fields (seconds, minute, hour, day-of-month, month, day-of-week) and optionally a seventh year field. AWS EventBridge also uses a variant. The generator supports both formats — select the correct format for your platform.</p>
+  <h3>How do I test a cron expression before deploying?</h3>
+  <p>Use the "Next run times" preview in this generator — it shows the next five actual datetimes the expression will trigger, which immediately reveals any misconfiguration. You can also run <code>crontab -e</code> on a test server and temporarily use a frequent interval like <code>* * * * *</code> to verify your command works before switching to the production schedule.</p>
+  <h3>Why is my cron job not running?</h3>
+  <p>Common reasons include: (1) the cron daemon is not running on your server, (2) the environment variables inside cron differ from your shell (no PATH to find commands), (3) you used a relative file path instead of an absolute path, (4) the user running cron lacks permission to execute the script, or (5) you are in a different timezone than expected — cron uses the system timezone unless you specify one explicitly.</p>
+  <h3>Does the generator support seconds-level scheduling?</h3>
+  <p>Standard cron only schedules to the minute level. For second-level precision, you typically need a language-level scheduler (like APScheduler in Python, node-schedule in Node.js, or Quartz in Java) rather than the system cron daemon. The generator's Quartz mode includes a seconds field for platforms that support it.</p>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a cron job?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A cron job is a scheduled task on Unix/Linux systems that runs automatically at a specified time or interval. Common uses include database backups, sending emails, clearing caches, and triggering CI/CD pipelines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between cron syntax and Quartz cron syntax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard cron uses five fields (minute, hour, day-of-month, month, day-of-week). Quartz Scheduler uses six fields adding seconds, and optionally a seventh year field. AWS EventBridge uses its own variant."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I test a cron expression before deploying?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the Next run times preview in this generator to see the next five actual datetimes the expression will trigger. This immediately reveals any misconfiguration before you deploy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my cron job not running?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common reasons: cron daemon not running, missing PATH environment variables, relative file paths, insufficient permissions, or a timezone mismatch between the server and your expected schedule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the generator support seconds-level scheduling?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard cron schedules to the minute only. The generator's Quartz mode includes a seconds field for platforms like Java Spring or AWS EventBridge that support sub-minute scheduling."
+      }
+    }
+  ]
+}
+</script>
 <footer style="background:#1a1a2e;margin-top:48px;padding:28px 24px;text-align:center;font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:13px;color:#94a3b8;line-height:1.8">
 <div style="font-weight:700;color:#fff;font-size:15px">⚡ Tabutility</div>
 <div>Free, private, browser-based tools. No sign-up, no tracking.</div>
